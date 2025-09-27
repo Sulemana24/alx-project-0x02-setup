@@ -1,4 +1,4 @@
-import { UserProps } from "../interfaces";
+import { UserProps } from "../../interfaces";
 
 export default function UserCard({ name, email, address }: UserProps) {
   return (

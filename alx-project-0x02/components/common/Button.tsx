@@ -1,4 +1,4 @@
-import { type ButtonProps } from "@/components/interfaces";
+import { type ButtonProps } from "@/interfaces";
 
 export default function Button({ size, shape, children }: ButtonProps) {
   const sizeClasses = {
