@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Header from "@/components/layout/Header";
 import PostModal from "@/components/common/PostModal";
-
+import Card from "@/components/common/Card";
 interface Post {
   id: number;
   title: string;
@@ -41,13 +41,10 @@ export default function HomePage() {
           onSave={handleSave}
         />
 
-        {/* Display new posts */}
+        {/* ✅ Use Card for posts */}
         <div className="mt-6 grid gap-4">
           {posts.map((post) => (
-            <div key={post.id} className="border p-4 rounded shadow">
-              <h2 className="font-bold text-lg">{post.title}</h2>
-              <p>{post.content}</p>
-            </div>
+            <Card key={post.id} title={post.title} content={post.content} />
           ))}
         </div>
       </div>
